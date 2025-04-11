@@ -83,12 +83,13 @@ Once installed, you need to **set up your environment** before you can use it. P
 eval "$(zoxide init bash)"
 ```
 
-This command spits out its configuration code that your shell will evaluate every time it loads. To reload your shell choose one of:
+This command spits out its configuration code that your shell will evaluate every time it loads. Then reload your shell:
 
 ```sh
 source ~/.bashrc
-source ~/.zshrc
 ```
+
+Note that zoxide supports multiple shells, including Zsh, Fish, Nushell, and other shells that I've never heard of.
 
 ### `z` Is All You Need
 
