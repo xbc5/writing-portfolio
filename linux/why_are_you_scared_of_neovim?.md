@@ -1,32 +1,32 @@
-# Why Are You Scared of Neovim?
+# Why Are You Scared of Neovim? It's Easy; You're Being a Big Baby
 
-## What is it, and who is it for?
+## Neovim Unpacked: What Is It, and Should You Care?
 
-Consistently voted one of the most desirable text editors on StackOverflow, year in and year out, Neovim's aims are simple: keyboard-driven input and efficiency.
+Consistently voted one of the most desirable text editors on Stack Overflow, year in and year out, Neovim's aims are simple: keyboard-driven input and efficiency.
 
-It's learning curve is steeper than a plain old text editor, but not as steep as you may think. Most of Vim and Neovim's keymaps are mnemonic, which means that the keymaps intuitively match the first letter of command names. For example, "delete inside brackets" is `di(`; "delete word" is `dw`.
+Its learning curve is steeper than a plain old text editor, but not as steep as you may think. Most of Vim's and Neovim's keymaps are mnemonic, which means that the keymaps intuitively match the first letter of command names. For example, "delete inside brackets" is `di(`; "delete word" is `dw`.
 
 Three things that set Neovim apart from Vim:
 
 - Lua: Neovim uses Lua instead of VimScript; both languages extend their capabilities, but Lua focuses on performance.
 
-- LSP: Essentially built-in code intelligence for programmers.
+- LSP (Language Server Protocol): Essentially built-in code intelligence for programmers.
 
-- Treesitter: Better color highlighting for files: code, configuration, markdown files, etc.
+- Tree-sitter: Better color highlighting for files: code, configuration, markdown files, etc.
 
-So you see, Neovim is for beginners and advanced users alike -- but it's only for beginners who wish to improve over time and eventually learn Lua. Vim and Neovim are for those who want to put in the effort to improve their workflow.
+So you see, Neovim is for beginners and advanced users alike—but it's only for beginners who wish to improve over time and eventually learn Lua. Vim and Neovim are for those who want to put in the effort to improve their workflow.
 
-Putting it all together: Neovim's focus is on quick and efficient, keyboard-driven movements (called motions) and text manipulation (called text objects), with a strong emphasis on plugins and code.
+Putting it all together: Neovim's focus is on quick and efficient, keyboard-driven movements—called motions—and text manipulation—called text objects, with a strong emphasis on plugins and code.
 
-This doesn't mean that Neovim is for programmers only; it's Vim with greater support for plugins.
+This doesn't mean that Neovim is for programmers only, it's Vim with greater support for plugins.
 
-## Motions, text object, and black magic
+## Text Wizardry 101: Motions, Objects, and Black Magic
 
-"I don't want to waste my life learning the keymaps." This is often the excuse that I hear, but only if the rest of your life is a few hours is this true.
+"I don't want to waste my life learning the keymaps." This is often the excuse that I hear, but only if the rest of your life is a few hours, is this true.
 
 What people generally don't understand is that Vim maps keys mnemonically (easy-to-remember). I never learned all of the keymaps; I learned about a dozen keymap elements.
 
-Movement (aka motions) is simple:
+**Motions** (i.e., **movements**) are simple:
 
 - left, down, up, right: `h`, `j`, `k`, `l`
 
@@ -38,9 +38,9 @@ Movement (aka motions) is simple:
 
 There are 15-20 common movement keys that you will learn.
 
-Text manipulation (aka text objects) uses the easy-to-remember keymaps:
+**Text objects** (i.e., **text manipulation**) use easy-to-remember keymaps:
 
-- Delete around a word:`daw`
+- Delete around a word: `daw`
 
 - Delete to the end of the line: `d$`
 
@@ -50,13 +50,13 @@ Text manipulation (aka text objects) uses the easy-to-remember keymaps:
 
 - Delete around brackets: `da(`
 
-There are hundreds (if not thousands) of combinations, all simple to remember because the keystrokes (elements) often resemble common English words.
+There are hundreds—if not thousands—of combinations, all simple to remember because the keystrokes (elements) often resemble common English words.
 
 After a day or two you will have fully committed to memory 10-15 core motions and text objects, enough to perform basic text editing.
 
-## Community
+## The Neovim Cult—Err, Community
 
-Vim and Neovim have absolutely gigantic communities (probably millions of users), and one thing above all else should determine your choice in tooling: support. Support comes in two forms: help and development.
+Vim and Neovim have absolutely gigantic communities—probably millions of users, and one thing above all else should determine your choice in tooling: support. Support comes in two forms: help and development.
 
 Neovim has active communities in the area of help:
 
@@ -70,7 +70,7 @@ Neovim has active communities in the area of help:
 
 Plugins also maintain their own small communities, often on Matrix or GitHub.
 
-## Plugins
+## Pluginsanity: How Neovim’s Ecosystem Makes It Unbeatable
 
 Neovim has thousands of plugins and around 100 plugins that almost everybody uses. Format documents, check your work, or interact with your project in useful ways.
 
@@ -86,22 +86,22 @@ Some of the most popular plugins:
 
 Neovim's extensibility and the size of its community ensure that there are continuously new plugins and new ideas. You can find a lot more plugins and keep up to date with new plugins on [dotfyle](https://dotfyle.com/).
 
-## Distributions
+## The Beginner's On-Ramp: How Distros Make the Leap Less Scary
 
-Popular, extensible applications in Linux often end up with distributions -- e.g. what Debian is to Linux, LazyVim is to Neovim. Every distribution has their own approach, plugins, and defaults.
+Popular, extensible applications in Linux often end up with distributions—e.g., what Debian is to Linux, LazyVim is to Neovim. Every distribution has their own approach, plugins, and defaults.
 
 Some notable distributions are [AstroNvim](https://astronvim.com/), [NvChad](https://github.com/NvChad/NvChad), and [LazyVim](http://www.lazyvim.org/). I personally use LazyVim because it's for people who want to spend less time configuring their text editor.
 
-Configuring complex applications takes work and maintenance. Over time things change and break. Using a distribution like LazyVim means that you get the benefits of someone else developing your configuration, yet you still have the power to override any of the defaults. You can still configure it exactly as you want.
+Configuring complex applications takes work and maintenance. Over time things change and break. But using a distribution like LazyVim means that you get the benefits of someone else developing your configuration, yet you still have the power to override any of the defaults. You can still configure it exactly as you want.
 
-The drawback with distributions is the "abstractions" (aka "magic"): it hides the detail and does a lot of work out of view. When something breaks, it's not as easy to understand. When you want to change something, you need to understand a little bit about that "magic" (read the documentation). Distributions are easy to get started, but they do take some effort eventually. That said, they're still a net gain.
+The drawback with distributions is the "abstractions"—aka "magic": it hides the detail and does a lot of work out of view. When something breaks, it's not as easy to understand. When you want to change something, you need to understand a little bit about that "magic"—read the documentation. Distributions are easy to get started, but they do take some effort eventually. That said, they're still a net gain.
 
-## Conclusion
+## Closing Thoughts: Why Neovim Deserves a Chance
 
 This isn't a guide on how to get started in Neovim; it's an attempt to convince you why you should be using it.
 
 The community is large, and the support material is plenty. Maintenance and new features are continuous, and new plugins pop up all of the time.
 
-The biggest win for Neovim (and Vim in general) is its efficiency in doing exactly as you want with little effort. Once you commit that to muscle memory, you will be modifying text as efficiently as you press keys. Using Vim is a change in mindset more than it is a change of an editor. You feel closer to the task at hand and more immersed in the flow of ideas than the execution of them.
+The biggest win for Vim and Neovim is the efficiency to do exactly as you want with little effort. Once you commit that to muscle memory, you will be modifying text as efficiently as you press the keys on your keyboard. Using Vim is a change of mindset more than it is a change of an editor. You feel closer to the task at hand and more immersed in the flow of ideas than the execution of them.
 
 To add to that, Neovim is endlessly extensible, and if you pick up Lua, it's extensible exactly as you need.
