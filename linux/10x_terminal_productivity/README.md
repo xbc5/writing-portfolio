@@ -53,19 +53,34 @@ For example, pick a process to kill:
 ps aux | fzf | awk '{print $2}' | xargs kill -9
 ```
 
+<p style="text-align: center;">
+  <img src="./assets/fzf-ps-kill.png" alt="A picture of FZF displaying a list of processes." width="800" style="height: auto;">
+  <figcaption><i><b>fzf</b> searching over a list of processes. Select one to kill it.</i></figcaption>
+</p>
+
 Check environment variables:
 
 ```sh
 env | fzf
 ```
 
+<p style="text-align: center;">
+  <img src="./assets/fzf-env.png" alt="A picture of FZF displaying a list of environment variables." width="800" style="height: auto;">
+  <figcaption><i><b>fzf</b> displaying a list of environment variables. You can improve this command and make it set or unset values.</i></figcaption>
+</p>
+
 Fzf is a staple for most who use the terminal, employing it in hundreds of different ways across hundreds of different applications. Neovim plugins, for example, use it to find files by their name, contents, and more.
 
 The number of applications is broad and unbounded, so specifying them all here is not possible.
 
-## Zoxide: Stop Typing Full Paths Like a N00b
+## Zoxide: Stop Typing Full Paths Like a _N00b_
 
 [Zoxide](https://github.com/ajeetdsouza/zoxide) is a small and simple utility that records all of the directories that you visit and allows you to **fuzzy search over those directories and _jump_ to them**. It's quick, painless, and it forgives typos.
+
+<p style="text-align: center;">
+  <img src="./assets/zoxide-sm.png" alt="zoxide displaying a list of directories in the termina." width="800" style="height: auto;">
+  <figcaption><i><b>zoxide</b> displaying a list of directories via the `zi` command, which manually activates the fuzzy selector menu.</i></figcaption>
+</p>
 
 It integrates (in one form or another) with over 20 popular applications, including Yazi (built-in), [Emacs](https://stable.melpa.org/#/zoxide), and [Neovim](https://github.com/jvgrootveld/telescope-zoxide).
 
@@ -111,6 +126,11 @@ Navigating with a file manager allows you to peek inside of directories, files, 
 
 [Yazi](https://yazi-rs.github.io/) is one such command-line file manager, and it's my favorite.
 
+<p style="text-align: center;">
+  <img src="./assets/yazi.png" alt="A directory listing and file preview displayed by Yazi." width="800" style="height: auto;">
+  <figcaption><i>A directory listing and file preview displayed by Yazi.</i></figcaption>
+</p>
+
 ### Async Means That It Doesn't Freeze
 
 Yazi is a modern take on [Ranger](https://github.com/ranger/ranger) that promises to be faster. [Ranger blocks the UI while it works](https://github.com/sxyazi/yazi/discussions/806#discussioncomment-9178860); Yazi does not.
@@ -124,6 +144,11 @@ In addition to the task queue, it has a **messaging system** that allows you to 
 ### Yazi + Zoxide: Breaking The Speed Limit
 
 It has built-in support for zoxide, so you can fly around the file system at the speed of light.
+
+<p style="text-align: center;">
+  <img src="./assets/yazi-zoxide.png" alt="A zoxide fuzzy menu list displayed inside of Yazi." width="800" style="height: auto;">
+  <figcaption><i>zoxide integration with Yazi. Hit `z` and choose a path in your history to quickly jump to it.</i></figcaption>
+</p>
 
 ### Plugin Power: You Can Extend Yazi Beyond Its Limits
 
@@ -151,6 +176,11 @@ If you use Debian, you will need to compile it yourself. For [Fedora](https://co
 
 [Zellij](https://zellij.dev/) is a [terminal multiplexer](https://en.wikipedia.org/wiki/Terminal_multiplexer), which means that you can **create multiple _virtual_ terminals within your terminal** and lay them out as you wish. It's a modern take on [Tmux](https://github.com/tmux/tmux/wiki).
 
+<p style="text-align: center;">
+  <img src="./assets/zellij-full-floating.png" alt="Multiple terminals, panes, and active shell commands, displayed by Zellij." width="800" style="height: auto;">
+  <figcaption><i>The default configuration of Zellij in all of its glory. The pane in the middle is a floating pane, which you can activate and deactivate with `Ctrl+f`.</i></figcaption>
+</p>
+
 Tmux **extensions are often difficult and time-consuming** to configure, and they frequently go unmaintained. With Zellij, you get some core, powerful features for free, with zero configuration.
 
 Zellij also uses Vim controls, and it displays contextual keymap information in a status bar. This makes it both familiar—to Vim users—and easy to pick up.
@@ -161,9 +191,19 @@ One of the features that I find myself using a lot is the search functionality: 
 
 Search has other features like case sensitivity, whole words, and page scrolling. I use it a lot to find specific outputs from commands.
 
+<p style="text-align: center;">
+  <img src="./assets/zellij-search.png" alt="A directory listing displayed in Zellij. A single directory highlighted because search mode is active." width="800" style="height: auto;">
+  <figcaption><i>This is the search mode in Zellij. The input field is at the bottom; it highlights the results—use `n` and `p` to cycle through them.</i></figcaption>
+</p>
+
 ### Own Your Scrollback Buffer: Discard the Noise and Keep What's Important
 
-Another feature that complements search is the ability to edit the scrollback buffer. This means that you can open the entire terminal scrollback in your editor. Use `Ctrl+s, e`, and Zellij will open it in your `$EDITOR`—your system's default.
+Another feature that complements search is the ability to edit the scrollback buffer—the entire command output history—in a text editor. Use `Ctrl+s, e`, and Zellij will open it in your system's default `$EDITOR`.
+
+<p style="text-align: center;">
+  <img src="./assets/zellij-scrollback-editor.png" alt="The scrollback buffer opened in Neovim." width="800" style="height: auto;">
+  <figcaption><i>The scrollback buffer opened in Neovim—edit and save it in any way that you please.</i></figcaption>
+</p>
 
 I use this to go through log files using a powerful text editor like Neovim: I delete what I don't need, then save the output somewhere for further analysis. This opens up a world of powerful plugins via your text editor or even its command shell. I use this often to process [JSON](https://en.wikipedia.org/wiki/JSON) with [jq](https://jqlang.org/) and lean heavily on Neovim's powerful editing capabilities.
 
@@ -174,6 +214,11 @@ The core reason that I use terminal multiplexers is to restore previous sessions
 I work in virtual machines non-stop, so I'm always stopping and starting systems. My layouts and open windows disappear every time. It's difficult to set this up multiple times each day.
 
 Zellij automatically saves my session so it can recall it the next time that I boot up the system. After I choose my session, it restores all of the applications and layouts exactly as they were.
+
+<p style="text-align: center;">
+  <img src="./assets/zellij-session-pick.png" alt="The session manager open in Zellij. The user picking a session from a list." width="800" style="height: auto;">
+  <figcaption><i>To restore a session, pick it from the "Resurrect Session" list. You can give the sessions custom names.</i></figcaption>
+</p>
 
 ### Copy-and-Paste With the Mouse—A Guilty Pleasure
 
