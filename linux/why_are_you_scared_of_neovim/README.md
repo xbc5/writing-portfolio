@@ -14,10 +14,12 @@ Three things that set Neovim apart from Vim:
 
 - Tree-sitter: Better color highlighting for files: code, configuration, markdown files, etc.
 
-<p style="text-align: center;">
-  <img src="./assets/lsp-and-tree-sitter.png" alt="A demonstration of what LSP and Tree-sitter look like." width="800" style="height: auto;">
+<figure>
+  <img src="./assets/lsp-and-tree-sitter.png" alt="A demonstration of what LSP and Tree-sitter look like.">
   <figcaption><i>LSP provides the red error message, and its companion—Trouble—displays the errors at the bottom of the screen. Tree-sitter colors individual words.</i></figcaption>
-</p>
+</figure>
+<br />
+<br />
 
 So you see, Neovim is for beginners and advanced users alike—but it's only for beginners who wish to improve over time and eventually learn Lua. Vim and Neovim are for those who want to put in the effort to improve their workflow.
 
@@ -89,15 +91,19 @@ Some of the most popular plugins:
 
 - [mason.nvim](https://dotfyle.com/plugins/williamboman/mason.nvim): for those who write code, this is essentially a package manager for LSP (language intelligence), linters (code checkers), formatters (automatic styling), and debuggers.
 
-<p style="text-align: center;">
-  <img src="./assets/fzf-lua.png" alt="A picture of fzf-lua. It shows a list of files and a file preview window." width="800" style="height: auto;">
+<figure>
+  <img src="./assets/fzf-lua.png" alt="A picture of fzf-lua. It shows a list of files and a file preview window.">
   <figcaption><i><b>fzf-lua</b>: As you type, the list of files updates in real time, and it displays the contents of the selected file.</i></figcaption>
-</p>
+</figure>
+<br />
+<br />
 
-<p style="text-align: center;">
-  <img src="./assets/mason.png" alt="A picture of Mason. It shows a list of installed applications." width="800" style="height: auto;">
+<figure>
+  <img src="./assets/mason.png" alt="A picture of Mason. It shows a list of installed applications.">
   <figcaption><i><b>mason.nvim</b>: A list of installed applications. You can use this menu to install from thousands of options.</i></figcaption>
-</p>
+</figure>
+<br />
+<br />
 
 Neovim's extensibility and the size of its community ensure that there are continuously new plugins and new ideas. You can find a lot more plugins and keep up to date with new plugins on [dotfyle](https://dotfyle.com/).
 
@@ -107,15 +113,19 @@ Popular, extensible applications in Linux often end up with distributions—e.g.
 
 Some notable distributions are [AstroNvim](https://astronvim.com/), [NvChad](https://github.com/NvChad/NvChad), and [LazyVim](http://www.lazyvim.org/). I personally use LazyVim because it's for people who want to spend less time configuring their text editor.
 
-<p style="text-align: center;">
-  <img src="./assets/nvchad.webp" alt="A picture of NvChad. It displays multiple text buffers and various screens." width="800" style="height: auto;">
+<figure>
+  <img src="./assets/nvchad.webp" alt="A picture of NvChad. It displays multiple text buffers and various screens.">
   <figcaption><i><b>NvChad</b>: Copyright © 2025 Siduck™. (Fair use.)</i></figcaption>
-</p>
+</figure>
+<br />
+<br />
 
-<p style="text-align: center;">
-  <img src="./assets/astrinvim.webp" alt="A picture of AstroNvim. It displays multiple text buffers and various screens." width="800" style="height: auto;">
+<figure>
+  <img src="./assets/astrinvim.webp" alt="A picture of AstroNvim. It displays multiple text buffers and various screens.">
   <figcaption><i><b>AstroNvim</b>: © The AstroNvim Team. (Fair use.)</i></figcaption>
-</p>
+</figure>
+<br />
+<br />
 
 Configuring complex applications takes work and maintenance. Over time things change and break. But using a distribution like LazyVim means that you get the benefits of someone else developing your configuration, yet you still have the power to override any of the defaults. You can still configure it exactly as you want.
 
