@@ -23,7 +23,7 @@ In this article, I'll explain
 
 - _How_ [Qubes](https://www.qubes-os.org/) isolates and responds to threats better than Linux.
 
-Hopefully I will change your mind from a reactive mindset to a proactive one.
+Hopefully I will change you from a reactive mindset to a proactive one.
 
 # What is Qubes?
 
