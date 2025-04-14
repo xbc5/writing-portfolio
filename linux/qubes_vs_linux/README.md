@@ -1,5 +1,12 @@
 # Linux vs. Qubes: Why Linux Isn't Enough To Protect You
 
+<figure>
+  <img src="https://img.ccnull.de/1010000/preview/1014782_bff24a5ff73432f4168d6f14704a5078.jpg" alt="Binary with red text that reads 'malware'.">
+  <figcaption><i>Photo: "Red word MALWARE (malicious software) in blue binary code of 1s and 0s on screen" by Marco Verch via ccnull.de, CC-BY 2.0</i></figcaption>
+</figure>
+<br />
+<br />
+
 ## Malware is Ever-Present
 
 The UK government states that [half of UK businesses reported a breach or attack in 2024](https://web.archive.org/web/20250406023032/https://www.gov.uk/government/statistics/cyber-security-breaches-survey-2024/cyber-security-breaches-survey-2024). They recommend:
@@ -44,7 +51,12 @@ What does virtualization mean? Xen divides up your computer's resources into vir
 
 So in short, a security domain is a VM with its own operating system. Your security domains for work, shopping, banking, etc., are separate operating systems contained within a VM.
 
-[A graph with work, shopping, and banking domains—each wrapped in a node labelled "VM."](./assets/security-domains-are-vms.png)
+<figure>
+  <img src="./assets/security-domains-are-vms.png" alt="A graph with work, shopping, and banking domains—each wrapped in a node labelled VM.">
+  <figcaption><i>Each security domain is a VM. Xen enforces boundaries. Qubes packages them all up into a distributable operating system.</i></figcaption>
+</figure>
+<br />
+<br />
 
 # What Classes of Security Domains Exist?
 
@@ -68,7 +80,12 @@ DomUs are the security domains that you will use to run your applications. Qubes
 
 A picture is worth a thousand words.
 
-[A graph that details how AppVMs, TemplateVMs, and DispVMs relate to Xen, Dom0, and DomU.](./assets/domain-architecture.png)
+<figure>
+  <img src="./assets/domain-architecture.png" alt="A graph that details how AppVMs, TemplateVMs, and DispVMs relate to Xen, Dom0, and DomU.">
+  <figcaption><i>Dom0 is the domain that manages all other domains. All other domain classes are collectively known as DomUs. A DomU is the security domain that you use to draw boundaries around your identities. AppVMs, TemplateVMs, and DispVMs are classes of DomUs.</i></figcaption>
+</figure>
+<br />
+<br />
 
 AppVMs, TemplateVMs, and DispVMs are concepts relevant to Qubes. Dom0 and DomU are relevant to Xen. Qubes builds on top of Xen, but for the duration of this article, only the Qubes concepts matter most.
 
@@ -116,7 +133,14 @@ Qubes spins up another VM (security domain). This new, isolated security domain 
 
 The malware tries to locate your passwords, browser sessions, ANYTHING--it finds nothing. The malware then tries to call home, but has no network access—you configured it that way. The attack fails; nothing happens, and the disposable VM powers down, wiping all of its changes—including an installed keylogger. Your system is as clean as a whistle.
 
-[An entity relationship diagram that shows how a DispVM relates to an AppVM and how it contains attacks in a separate security boundary](./assets/dispvm-thwarts-email-attack.png)
+[](./assets/dispvm-thwarts-email-attack.png)
+
+<figure>
+  <img src="./assets/dispvm-thwarts-email-attack.png" alt="An entity relationship diagram that shows how a DispVM relates to an AppVM and how it contains attacks in a separate security boundary">
+  <figcaption><i>DispVMs can inherit from any AppVM. If a DispVM inherits from an AppVM with secrets, those secrets are available to everything inside of the DispVM—including malware. You can either block network access or inherit from an empty domain.</i></figcaption>
+</figure>
+<br />
+<br />
 
 This is—in the Qubes world—a disposable VM. As the name suggests, they're temporary and only last for as long as they're powered up.
 
@@ -126,7 +150,12 @@ Disposable VMs are the nuclear option—you use them for risky activities or to 
 
 There are two other classes mentioned earlier; we need to understand the relationship between them.
 
-[An entity relationship diagram with nodes and edges. It displays the relationship between a TemplateVM, AppVM, and DispVM—in that order.](./assets/vm-inheritance.png)
+<figure>
+  <img src="./assets/vm-inheritance.png" alt="A diagram of nodes and edges, where the nodes are security domains and the edges are a one-way relationship. The relationship goes from TemplateVM to AppVM to and DispVM—in that order.">
+  <figcaption><i>The TemplateVM provides system files. The AppVM provides user files. The DispVM receives both.</i></figcaption>
+</figure>
+<br />
+<br />
 
 - Changes made to the TemplateVM are reflected in all of the others.
 
@@ -188,11 +217,21 @@ A DispVM has read-only access to the AppVM that it's based upon. If that AppVM h
 
 You can use any AppVM as a template. I typically create a blank AppVM, put nothing in it, and use that. It's empty, and it contains no secrets. When I perform a risky activity in such a DispVM—e.g., launch a PDF—any malicious outcome cannot steal secrets.
 
-[An illustration that shows a DispVM based on a blank AppVM does not have access to other, more important, security domains.](,/assets/blank-appvm-for-dispvm.png)
+<figure>
+  <img src="./assets/blank-appvm-for-dispvm.png" alt="An illustration that shows a DispVM that inherits from an empty domain.">
+  <figcaption><i>When a DispVM inherits from an empty domain, there are no secrets to steal. You can then send and open a file inside of that DispVM. If there is malware in the sent file, it has no access to secrets.</i></figcaption>
+</figure>
+<br />
+<br />
 
 You can also restrict or remove network access to any security domain—including DispVMs. When you restrict network access, you limit how effective the malware is—if it cannot report home, it's useless.
 
-[An illustration that shows that a disposable VM with restricted network access cannot phone home](,/assets/restricted-network-attack.png)
+<figure>
+  <img src="./assets/restricted-network-attack.png" alt="An illustration that shows that a disposable VM with restricted network access cannot phone home">
+  <figcaption><i>When you open something in a network-restricted DispVM, malware cannot phone home.</i></figcaption>
+</figure>
+<br />
+<br />
 
 # How Should You Use a TemplateVM?
 
