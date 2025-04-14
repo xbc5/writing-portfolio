@@ -1,5 +1,23 @@
 # Linux vs. Qubes: Why Linux Isn't Enough To Protect You
 
+## Malware is Ever-Present
+
+The UK government states that [half of UK businesses reported a breach or attack in 2024](https://web.archive.org/web/20250406023032/https://www.gov.uk/government/statistics/cyber-security-breaches-survey-2024/cyber-security-breaches-survey-2024). They recommend:
+
+> - Using up-to-date malware protection.
+> - Restricting admin rights.
+> - Network firewalls.
+
+These are standard recommendations, and while they're useful, they do not handle the most obvious case: **infection**. Malware _will_ infect your business (or computer); it's inevitable.
+
+In this article, I'll explain
+
+- _How_ an attacker may breach your system.
+
+- _How_ Qubes isolates and responds to threats better than Linux.
+
+Hopefully I will change your mind from a reactive mindset to a proactive one.
+
 # What is Qubes?
 
 Qubes is an operating system—powered by Xen—that splits aspects of your online life up into security domains. Xen is at the heart of Qubes, and it's the primary driving force that enforces these security domains.
