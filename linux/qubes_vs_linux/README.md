@@ -1,4 +1,4 @@
-# Linux vs. Qubes: Why Linux Isn't Enough To Protect You
+# Linux vs. Qubes: Why Linux Isn't Enough to Protect You
 
 <figure>
   <img src="https://img.ccnull.de/1010000/preview/1014782_bff24a5ff73432f4168d6f14704a5078.jpg" alt="Binary with red text that reads 'malware'.">
@@ -131,7 +131,7 @@ Now you open your email client and see the suspicious email. You download the at
 
 Qubes spins up another VM (security domain). This new, isolated security domain receives the attachment and opens it; it installs malware. This time it's different: The attack occurs in an empty disposable VM.
 
-The malware tries to locate your passwords, browser sessions, ANYTHING--it finds nothing. The malware then tries to call home, but has no network access—you configured it that way. The attack fails; nothing happens, and the disposable VM powers down, wiping all of its changes—including an installed keylogger. Your system is as clean as a whistle.
+The malware tries to locate your passwords, browser sessions, ANYTHING—it finds nothing. The malware then tries to call home, but has no network access—you configured it that way. The attack fails; nothing happens, and the disposable VM powers down, wiping all of its changes—including an installed keylogger. Your system is as clean as a whistle.
 
 [](./assets/dispvm-thwarts-email-attack.png)
 
@@ -187,7 +187,7 @@ AppVMs preserve user files; DispVMs go full nuclear.
 
 This table shows that when you reboot an AppVM, it preserves all of your user files—e.g., your browser bookmarks, cookies, etc. AppVMs are usable for everyday use, but they still protect the root file system. The other domains are for specific purposes.
 
-The TemplateVM doesn't reset any logical volumes, becuase is where we make system-level changes to our security domains. See the relationships diagram above.
+The TemplateVM doesn't reset any logical volumes, because is where we make system-level changes to our security domains. See the relationships diagram above.
 
 # How Should You Use an AppVM?
 
@@ -253,7 +253,7 @@ So we've looked at
 
 So that's the theory, but what does that look like in practice? I can speak of my personal setup and what I use them for:
 
-- Daily: My everyday browser: YouTube, yCombinator, Reddit, and LOLcats.
+- Daily: My everyday browser: YouTube, Y Combinator, Reddit, and LOLcats.
 
 - Dev: A programming domain that contains my code, editors, compilers, tools, Docker, and lots of tears.
 
@@ -293,7 +293,7 @@ How common is firmware corruption, though? It depends on the device. Some are lo
 
 In some cases, a USB device may not get full memory access to corrupt a system, but it can also present itself as something else and execute malicious commands. For example, the [Bad USB](https://en.wikipedia.org/wiki/BadUSB) is such an attack: a corrupt USB device presents itself as a keyboard to the operating system, and it then proceeds to type malicious commands.
 
-What about your WiFi? The same principle applies because they use the same technology. If your WiFi firmware has an exploitable bug (and it probably has a few), could a malicious neighbor trick it into modifying your system memory? Your neighbors are probably decent people, but what about people at a random coffee shop or a hotel? What if you're responsible for trade secrets or important research data—does a targeted attack sound so unlikely then?
+What about your Wi-Fi? The same principle applies because they use the same technology. If your WiFi firmware has an exploitable bug (and it probably has a few), could a malicious neighbor trick it into modifying your system memory? Your neighbors are probably decent people, but what about people at a random coffee shop or a hotel? What if you're responsible for trade secrets or important research data—does a targeted attack sound so unlikely then?
 
 These risks are why Qubes draws boundaries around USB and network devices. In fact, they're special boundaries: Qubes uses a technology called [VT-d](https://en.wikipedia.org/wiki/X86_virtualization#Intel-VT-d), which means that it can assign a separate memory segment to each device. If the device goes rogue, it can only modify its own memory segment.
 
