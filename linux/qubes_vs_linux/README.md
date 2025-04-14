@@ -93,7 +93,7 @@ AppVMs, TemplateVMs, and DispVMs are concepts relevant to Qubes. Dom0 and DomU a
 
 As mentioned earlier, security domains are virtual computers running their own operating systems; they're also boundaries around aspects of your online life.
 
-Let me explain why security domains are important. Say that you're working on a project for work, and you open your email to talk to a client or colleague. You notice an unfamiliar email, and you open it. There's a strange message that simply says _lol_ and an attachment. You feel compelled to open the attachment to make sense of the email. You open it, and nothing. You think that's weird, but you move on. Weeks go by, and you think nothing of it. You wake up to a phone call one morning, and it's your bank. They say that they've blocked a suspicious transfer for \\$5000 from a country on the other side of the world—but unfortunately, they did not stop two prior transfers of \\$500 each.
+Let me explain why security domains are important. Say that you're working on a project for work, and you open your email to talk to a client or colleague. You notice an unfamiliar email, and you open it. There's a strange message that simply says _lol_, and an attachment. You feel compelled to open the attachment to make sense of the email. You open it, and nothing. You think _that's weird_, but you move on. Weeks go by, and you think nothing of it. You wake up to a phone call one morning, and it's your bank. They say that they've blocked a suspicious transfer for \$5000 from a country on the other side of the world—but unfortunately, they did not stop two prior transfers of \$500 each.
 
 You may not put two and two together immediately, but the email attachment that you opened earlier exploited a bug in your email reader and installed malware to steal your secrets. The attacker then further compromised your password manager, which also stores your card details. They swiped it—along with 20 of your other passwords—and sold your card details on the black market for pennies. Now you're in a situation where you need to change 20 passwords, spend hours on the phone to the bank, get new cards, and hope that you've covered all of your bases.
 
@@ -115,7 +115,7 @@ Attackers cannot waltz into your Linux machine and plant whatever and whenever t
 
 - [PIE/PIC](https://en.wikipedia.org/wiki/Position-independent_code) (Position Independent Executables and Position Independent Code): A fancy way of saying that executables frequently change their address (in memory) to avoid the bad guys.
 
-There are a lot of other aspects about the Linux system that contribute to its security, but they're outside of the scope of this article. The point that I wish to make is that Linux does some things to protect your system, but it operates on one simple principle: protect the system. If the system is compromised, the game is over.
+There are a lot of other aspects about the Linux system that contribute to its security, but they're outside of the scope of this article. The point that I wish to make is that Linux does some things to protect your system, but it operates on one simple principle: **prevention**. If the system is compromised, the game is over.
 
 # Qubes Does Security Differently: Disposable Containers
 
@@ -187,7 +187,7 @@ AppVMs preserve user files; DispVMs go full nuclear.
 
 This table shows that when you reboot an AppVM, it preserves all of your user files—e.g., your browser bookmarks, cookies, etc. AppVMs are usable for everyday use, but they still protect the root file system. The other domains are for specific purposes.
 
-The TemplateVM doesn't reset any logical volumes, because is where we make system-level changes to our security domains. See the relationships diagram above.
+The TemplateVM doesn't reset any logical volumes, because it's where we make system-level changes to our security domains. See the relationships diagram above.
 
 # How Should You Use an AppVM?
 
