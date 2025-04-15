@@ -109,7 +109,7 @@ Attackers cannot waltz into your Linux machine and plant whatever and whenever t
 
 - [PIE/PIC](https://en.wikipedia.org/wiki/Position-independent_code) (Position Independent Executables and Position Independent Code): A fancy way of saying that executables frequently change their address (in memory) to avoid the bad guys.
 
-There are a lot of other aspects about the Linux system that contribute to its security, but they're outside of the scope of this article. The point that I wish to make is that Linux does some things to protect your system, but it operates on one simple principle: **prevention**. If the system is compromised, the game is over.
+There are a lot of other aspects about the Linux system that contribute to its security, but they're out of scope. The point that I wish to make is that Linux does some things to protect your system, but it operates on one simple principle: **prevention**. If the system is compromised, the game is over.
 
 # Qubes Does Security Differently: Disposable Containers
 
