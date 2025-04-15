@@ -1,5 +1,10 @@
 # Work Smarter, Not Harder: 10x Your Terminal Productivity With These 5 Tools
 
+![](./assets/header.jpg)
+<i>Photo by <a href="https://unsplash.com/@lukash?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Lukas</a> on <a href="https://unsplash.com/photos/a-computer-screen-with-a-lot-of-data-on-it-MU8w72PzRow?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></i>
+
+Have you ever painstakingly typed out a long and tedious command just for the terminal to spit out an error? It's missing a letter, a bracket, or a please and thank you. You type it again, it fails, and you grow frustrated. You may look upon the fabled Hollywood hacker with envy and think, _If only_. But is that just a fantasy? Could you make text fly across the screen like bullets fly in the Matrix? In a quest to 10x your terminal productivity, we'll explore five terminal tools that do just that—tools that should be the cornerstone of any advanced terminal workflow.
+
 ## Fzf: Lightning-Fast Searches in a Fuzzy Bottle
 
 [Fzf](https://junegunn.github.io/fzf/) is not a standalone tool but a utility that you can use with other tools. Essentially it's an **interactive search and filter tool**: It accepts a list of items and displays it—you then interactively type to narrow the result.
