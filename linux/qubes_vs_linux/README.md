@@ -13,13 +13,13 @@ Have you ever wondered how an attacker gains access to your system? Or if there'
 > - Restricting admin rights.
 > - Network firewalls.
 
-These are standard, preventative measures, and while they're useful, they do not handle the most obvious case: **infection**. [Malware](https://en.wikipedia.org/wiki/Malware) _will_ infect your business (or computer); it's inevitable.
+These are standard, preventative measures, and while they're useful, they do not handle the most obvious case: **infection**. Malware _will_ infect your business (or computer); it's inevitable.
 
 [Qubes](https://www.qubes-os.org/) takes an entirely different approach, and as we explore a common attack scenario, hopefully you will see how effective and useful Qubes is—enough to change your mindset from reactive to proactive.
 
 # What is Qubes?
 
-Qubes is an operating system—powered by [Xen](https://xenproject.org/)—that splits aspects of your online life up into [security domains](https://www.qubes-os.org/doc/security-design-goals/). Xen is at the heart of Qubes, and it's the primary driving force that enforces these security domains.
+Qubes is an operating system—powered by [Xen](https://xenproject.org/)—that splits aspects of your online life up into **security domains**. Xen is at the heart of Qubes, and it's the primary driving force that enforces these security domains.
 
 # What is a Security Domain?
 
@@ -37,7 +37,7 @@ For example:
 
 These are online identities, and in Qubes you can draw boundaries around each of these to keep them separate. Activities that occur in one security domain cannot affect another security domain.
 
-In terms of Xen, these security domains are [virtualization](https://en.wikipedia.org/wiki/Virtualization) boundaries—a virtual computer within your computer (aka virtual machine, aka **VM** for short).
+In terms of Xen, these security domains are virtualization boundaries—a virtual computer within your computer (aka virtual machine, aka **VM** for short).
 
 What does virtualization mean? Xen divides up your computer's resources into virtual spaces called virtual machines. It's possible to install operating systems into these virtual machines (VMs). You can think of them like strong containers for operating systems.
 
@@ -56,19 +56,19 @@ Xen is the foundational core of Qubes. Xen communicates with the hardware and pr
 
 Almost everything in Xen is run inside of a VM, and there are two types:
 
-- [DomU](https://www.qubes-os.org/doc/glossary/#domu): Typical VMs. These are what we typically know as "security domains."
+- **DomU**: Typical VMs. These are what we typically know as "security domains."
 
-- [Dom0](https://www.qubes-os.org/doc/glossary/#dom0): A special administration VM that manages DomUs. It is also a security domain, but it has special privileges.
+- **Dom0**: A special administration VM that manages DomUs. It is also a security domain, but it has special privileges.
 
 Dom0 is the first thing that you see when you log into Qubes: the desktop, the menus—it's Fedora. You protect Dom0 at all costs, so it has no network access. A compromise in Dom0 is game over.
 
 DomUs are the security domains that you will use to run your applications. Qubes splits DomUs into the following classes:
 
-- [AppVM](https://www.qubes-os.org/doc/glossary/#app-qube): A general, everyday security domain that you run your applications in.
+- **AppVM**: A general, everyday security domain that you run your applications in.
 
-- [TemplateVM](https://www.qubes-os.org/doc/glossary/#template): The parent of AppVMs, they provide the core system to AppVMs.
+- **TemplateVM**: The parent of AppVMs, they provide the core system to AppVMs.
 
-- [DispVM](https://www.qubes-os.org/doc/glossary/#disposable): A fully disposable, temporary VM. Use these for dirty tasks that you consider risky.
+- **DispVM**: A fully disposable, temporary VM. Use these for dirty tasks that you consider risky.
 
 A picture is worth a thousand words.
 
@@ -89,9 +89,9 @@ Let me explain why security domains are important. Say that you're working on a 
 
 You may not put two and two together immediately, but the email attachment that you opened earlier exploited a bug in your email reader and installed malware to steal your secrets. The attacker then further compromised your password manager, which also stores your card details. They swiped it—along with 20 of your other passwords—and sold your card details on the black market for pennies. Now you're in a situation where you need to change 20 passwords, spend hours on the phone to the bank, get new cards, and hope that you've covered all of your bases.
 
-A [keylogger](https://en.wikipedia.org/wiki/Keystroke_logging), [Trojan horse](<https://en.wikipedia.org/wiki/Trojan_horse_(computing)>), or [remote exploit](https://en.wikipedia.org/wiki/Arbitrary_code_execution)—these are very real scenarios. Software has bugs—some benign, some dangerous. It's thought that [for every one thousand lines of code, there is at _least_ one exploitable bug](https://stackoverflow.com/a/56043694). I don't know if you've ever counted how many lines of code are in your operating system, but let me save you some time: it's tens of millions—that's at _least_ tens of thousands of exploitable bugs. You only need to look at the [long list of reported CVEs](https://www.cve.org/CVERecord/SearchResults?query=Linux)—Common Vulnerabilities and Exposures—to realize that it's a revolving door.
+A keylogger, Trojan horse, or remote exploit—these are very real scenarios. Software has bugs—some benign, some dangerous. It's thought that [for every one thousand lines of code, there is at _least_ one exploitable bug](https://stackoverflow.com/a/56043694). I don't know if you've ever counted how many lines of code are in your operating system, but let me save you some time: it's tens of millions—that's at _least_ tens of thousands of exploitable bugs. You only need to look at the [long list of reported CVEs](https://www.cve.org/CVERecord/SearchResults?query=Linux)—Common Vulnerabilities and Exposures—to realize that it's a revolving door.
 
-Software is no joke: it flies airplanes, runs ICU wards, handles trillions of dollars in bank transfers, and, of course, it runs your web browser that displays your cat videos. But you also work at a hospital, a bank, or a research lab at a prestigious university. A foot in the door is all that an attacker needs to kick off a high-profile [ransomware](https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/ransomware) attack like [WannaCry](https://en.wikipedia.org/wiki/WannaCry_ransomware_attack).
+Software is no joke: it flies airplanes, runs ICU wards, handles trillions of dollars in bank transfers, and, of course, it runs your web browser that displays your cat videos. But you also work at a hospital, a bank, or a research lab at a prestigious university. A foot in the door is all that an attacker needs to kick off a high-profile ransomware attack like [WannaCry](https://en.wikipedia.org/wiki/WannaCry_ransomware_attack).
 
 So you see, protecting your own system is as much about protecting your own bank account as it is about protecting the organization that trusts you with its secrets and credentials. This is why it's so important to consider something like Qubes if you are in a position of responsibility, and most of us are.
 
@@ -99,13 +99,13 @@ So you see, protecting your own system is as much about protecting your own bank
 
 Attackers cannot waltz into your Linux machine and plant whatever and whenever they want. An attacker needs to work hard to find an exploit and deliver it, and then they need to build upon that attack. Linux does have some security features to prevent attacks.
 
-- [DAC](https://en.wikipedia.org/wiki/Discretionary_access_control) (Discretionary Access Control): Essentially file permissions and passwords—when you provide a password to install software, that is DAC.
+- **DAC** (Discretionary Access Control): Essentially file permissions and passwords—when you provide a password to install software, that is DAC.
 
-- [MAC](https://en.wikipedia.org/wiki/Mandatory_access_control) (Mandatory Access Control): Like locked doors and access codes, software can only access exactly what it's allowed to. Typically the developer, or your Linux distro vendor, writes these policies.
+- **MAC** (Mandatory Access Control): Like locked doors and access codes, software can only access exactly what it's allowed to. Typically the developer, or your Linux distro vendor, writes these policies.
 
-- [Kernel Self-Protection](https://docs.kernel.org/security/self-protection.html): A suite of policies and sensible defaults that hardens how the Linux kernel mediates access to resources—in a nutshell, it tries to avoid doing stupid things.
+- **Kernel Self-Protection**: A suite of policies and sensible defaults that hardens how the Linux kernel mediates access to resources—in a nutshell, it tries to avoid doing stupid things.
 
-- [PIE/PIC](https://en.wikipedia.org/wiki/Position-independent_code) (Position Independent Executables and Position Independent Code): A fancy way of saying that executables frequently change their address (in memory) to avoid the bad guys.
+- **PIE/PIC** (Position Independent Executables and Position Independent Code): A fancy way of saying that executables frequently change their address (in memory) to avoid the bad guys.
 
 There are a lot of other aspects about the Linux system that contribute to its security, but they're out of scope. The point that I wish to make is that Linux does some things to protect your system, but it operates on one simple principle: **prevention**. If the system is compromised, the game is over.
 
@@ -124,8 +124,6 @@ Now you open your email client and see the suspicious email. You download the at
 Qubes spins up another VM (security domain). This new, isolated security domain receives the attachment and opens it; it installs malware. This time it's different: The attack occurs in an empty disposable VM.
 
 The malware tries to locate your passwords, browser sessions, ANYTHING—it finds nothing. The malware then tries to call home, but has no network access—you configured it that way. The attack fails; nothing happens, and the disposable VM powers down, wiping all of its changes—including an installed keylogger. Your system is as clean as a whistle.
-
-[](./assets/dispvm-thwarts-email-attack.png)
 
 <figure>
   <img src="./assets/dispvm-thwarts-email-attack.png" alt="An entity relationship diagram that shows how a DispVM relates to an AppVM and how it contains attacks in a separate security boundary">
@@ -273,7 +271,7 @@ You may notice that I use my DispVMs slightly differently here than illustrated 
 
 # Protections From Malicious USB and Network Devices
 
-Qubes goes the extra mile; it creates security boundaries around your USB and network ports. You may not know it, but both represent a significant risk. Both have [DMA](https://en.wikipedia.org/wiki/Direct_memory_access) (Direct Memory Access). This means that the devices can write directly to system memory without the CPU.
+Qubes goes the extra mile; it creates security boundaries around your USB and network ports. You may not know it, but both represent a significant risk. Both have **DMA** (Direct Memory Access). This means that the devices can write directly to system memory without the CPU.
 
 [Wikipedia defines DMA](https://en.wikipedia.org/wiki/DMA_attack) as the following:
 
@@ -287,7 +285,7 @@ In some cases, a USB device may not get full memory access to corrupt a system, 
 
 What about your Wi-Fi? The same principle applies because they use the same technology. If your WiFi firmware has an exploitable bug (and it probably has a few), could a malicious neighbor trick it into modifying your system memory? Your neighbors are probably decent people, but what about people at a random coffee shop or a hotel? What if you're responsible for trade secrets or important research data—does a targeted attack sound so unlikely then?
 
-These risks are why Qubes draws boundaries around USB and network devices. In fact, they're special boundaries: Qubes uses a technology called [VT-d](https://en.wikipedia.org/wiki/X86_virtualization#Intel-VT-d), which means that it can assign a separate memory segment to each device. If the device goes rogue, it can only modify its own memory segment.
+These risks are why Qubes draws boundaries around USB and network devices. In fact, they're special boundaries: Qubes uses a technology called **VT-d**, which means that it can assign a separate memory segment to each device. If the device goes rogue, it can only modify its own memory segment.
 
 So in short, USB and network devices are attack vectors because they have direct memory access. Qubes isolates them at the hardware level and wraps them in their own security boundaries—called `sys-usb` and `sys-net`.
 
