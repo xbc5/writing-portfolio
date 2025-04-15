@@ -1,8 +1,15 @@
 # Why Are You Scared of Neovim? It's Easy; You're Being a Big Baby
 
-There are few pieces of software in this world that change the way that you think. Linux is one; moving away from the proprietary world of Microsoft probably has you thinking about FREE as in FREEDOM and as in FREE BEER.
+<figure>
+  <img src="./assets/header.svg" alt="Neovim's logo.">
+  <figcaption><i>Photo: Neovim by Jason Long, licensed under CC-BY SA 3.0</i></figcaption>
+</figure>
+<br />
+<br />
 
-[Neovim](https://neovim.io/) is another game-changer that will change how you think and interface with software. Let's explore the basics together and find out why Neovim is suitable for those who aspire to take their Linux skills to the next level.
+There are few pieces of software in this world that change the way that you think. Linux is one; moving away from the proprietary world of Microsoft probably had you thinking about FREE as in FREEDOM and as in FREE BEER.
+
+[Neovim](https://neovim.io/) is another game-changer that will change how you think and interface with software. Let's explore the basics together and find out why Neovim is indispensable for those who aspire to take their Linux skills to the next level.
 
 ## Neovim Unpacked: What Is It, and Should You Care?
 
