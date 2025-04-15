@@ -81,7 +81,7 @@ A picture is worth a thousand words.
 <br />
 <br />
 
-AppVMs, TemplateVMs, and DispVMs are concepts relevant to Qubes. Dom0 and DomU are relevant to Xen. Qubes builds on top of Xen, but for the duration of this article, only the Qubes concepts matter most.
+AppVMs, TemplateVMs, and DispVMs are concepts relevant to Qubes. Dom0 and DomU are relevant to Xen. Qubes builds on top of Xen, but for the duration, only the Qubes concepts matter.
 
 # Why are security domains important?
 
