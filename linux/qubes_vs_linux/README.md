@@ -285,7 +285,7 @@ In some cases, a USB device may not get full memory access to corrupt a system, 
 
 What about your Wi-Fi? The same principle applies because they use the same technology. If your WiFi firmware has an exploitable bug (and it probably has a few), could a malicious neighbor trick it into modifying your system memory? Your neighbors are probably decent people, but what about people at a random coffee shop or a hotel? What if you're responsible for trade secrets or important research data—does a targeted attack sound so unlikely then?
 
-These risks are why Qubes draws boundaries around USB and network devices. In fact, they're special boundaries: Qubes uses a technology called **VT-d**, which means that it can assign a separate memory segment to each device. If the device goes rogue, it can only modify its own memory segment.
+These risks are why Qubes draws boundaries around USB and network devices. In fact, they're special boundaries: Qubes uses a technology called **VT-d**, which means that it can—at the hardware level—**assign a device directly to a security domain**. If the device goes rogue, **it can only modify the memory within its assigned security domain**.
 
 So in short, USB and network devices are attack vectors because they have direct memory access. Qubes isolates them at the hardware level and wraps them in their own security boundaries—called `sys-usb` and `sys-net`.
 
