@@ -1,5 +1,9 @@
 # Why Are You Scared of Neovim? It's Easy; You're Being a Big Baby
 
+There are few pieces of software in this world that change the way that you think. Linux is one; moving away from the proprietary world of Microsoft probably has you thinking about FREE as in FREEDOM and as in FREE BEER.
+
+[Neovim](https://neovim.io/) is another game-changer that will change how you think and interface with software. Let's explore the basics together and find out why Neovim is suitable for those who aspire to take their Linux skills to the next level.
+
 ## Neovim Unpacked: What Is It, and Should You Care?
 
 Consistently voted one of the most desirable text editors on Stack Overflow, year in and year out, Neovim's aims are simple: keyboard-driven input and efficiency.
