@@ -9,21 +9,15 @@
 
 ## Malware is Ever-Present
 
-The UK government states that [half of UK businesses reported a breach or attack in 2024](https://web.archive.org/web/20250406023032/https://www.gov.uk/government/statistics/cyber-security-breaches-survey-2024/cyber-security-breaches-survey-2024). They recommend:
+Have you ever wondered how an attacker gains access to your system? Or if there's a better way to defend against threats? The UK government states that [half of UK businesses reported a breach or attack in 2024](https://web.archive.org/web/20250406023032/https://www.gov.uk/government/statistics/cyber-security-breaches-survey-2024/cyber-security-breaches-survey-2024). To reduce the risk of an infection, they recommend:
 
 > - Using up-to-date malware protection.
 > - Restricting admin rights.
 > - Network firewalls.
 
-These are standard recommendations, and while they're useful, they do not handle the most obvious case: **infection**. [Malware](https://en.wikipedia.org/wiki/Malware) _will_ infect your business (or computer); it's inevitable.
+These are standard, preventative measures, and while they're useful, they do not handle the most obvious case: **infection**. [Malware](https://en.wikipedia.org/wiki/Malware) _will_ infect your business (or computer); it's inevitable.
 
-In this article, I'll explain
-
-- _How_ an attacker may breach your system.
-
-- _How_ [Qubes](https://www.qubes-os.org/) isolates and responds to threats better than Linux.
-
-Hopefully I will change you from a reactive mindset to a proactive one.
+[Qubes](https://www.qubes-os.org/) takes an entirely different approach, and as we explore a common attack scenario, hopefully you will see how effective and useful Qubes is—enough to change your mindset from reactive to proactive.
 
 # What is Qubes?
 
